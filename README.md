@@ -1,7 +1,19 @@
 <div align="center">
-<h1>eslint-plugin-jest-extended</h1>
 
-ESLint plugin for jest-extended matchers
+  <h1>eslint-plugin-jest-extended</h1>
+
+  ESLint plugin for jest-extended matchers
+
+  <a href="https://eslint.org/">
+    <img width="150" height="150" src="https://eslint.org/img/logo.svg">
+  </a>
+  <a href="https://facebook.github.io/jest/">
+    <img width="150" height="150" vspace="" hspace="25" src="https://cdn.worldvectorlogo.com/logos/jest.svg">
+  </a>
+  <a href="https://github.com/jest-community/jest-extended">
+    <img width="150" height="150" src="https://camo.githubusercontent.com/b68d547b27824d6522a5f2fe80f0d25364204b45/68747470733a2f2f656d6f6a6970656469612d75732e73332e616d617a6f6e6177732e636f6d2f7468756d62732f3234302f6170706c652f3131342f666c657865642d6269636570735f31663461612e706e67">
+  </a>
+
 </div>
 
 <hr />
@@ -43,4 +55,4 @@ yarn add -D eslint-plugin-jest-extended
 
 ## LICENSE
 
-MIT
+[MIT](/LICENSE)
