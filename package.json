@@ -4,6 +4,8 @@
   "description": "ESLint plugin for jest-extended matchers",
   "main": "dist/index.js",
   "scripts": {
+    "contributor": "all-contributors add",
+    "contributor:gen": "all-contributors generate",
     "lint": "eslint src",
     "lint:fix": "yarn lint -- --fix",
     "precommit": "lint-staged",
@@ -25,6 +27,7 @@
   },
   "homepage": "https://github.com/mattphillips/eslint-plugin-jest-extended#readme",
   "devDependencies": {
+    "all-contributors-cli": "^4.8.1",
     "codecov": "^3.0.0",
     "eslint": "^4.11.0",
     "husky": "^0.14.3",
