@@ -5,7 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120"
+    "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120",
+    "test": "jest",
+    "test:coverage": "yarn test -- --coverage",
+    "test:report": "codecov",
+    "test:watch": "yarn test -- --watch"
   },
   "keywords": [],
   "author": "Matt Phillips <matt@mattphillips.io> (mattphillips.io)",
@@ -19,7 +23,9 @@
   },
   "homepage": "https://github.com/mattphillips/eslint-plugin-jest-extended#readme",
   "devDependencies": {
+    "codecov": "^3.0.0",
     "husky": "^0.14.3",
+    "jest": "^21.2.1",
     "lint-staged": "^5.0.0",
     "prettier": "^1.8.2"
   },
@@ -28,5 +34,19 @@
       "yarn prettier",
       "git add"
     ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }
