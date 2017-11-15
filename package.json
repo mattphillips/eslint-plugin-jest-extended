@@ -2,7 +2,7 @@
   "name": "eslint-plugin-jest-extended",
   "version": "0.0.1",
   "description": "ESLint plugin for jest-extended matchers",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "contributor": "all-contributors add",
     "contributor:gen": "all-contributors generate",
