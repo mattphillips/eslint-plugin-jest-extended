@@ -1,10 +1,12 @@
 const toBeTrue = require('./rules/toBeTrue');
+const toBeFalse = require('./rules/toBeFalse');
 
 module.exports = {
   configs: {
     recommended: {
       rules: {
-        'jest-extended/prefer-to-be-true': 'warn'
+        'jest-extended/prefer-to-be-true': 'warn',
+        'jest-extended/prefer-to-be-falsy': 'warn'
       }
     }
   },
@@ -32,6 +34,7 @@ module.exports = {
     }
   },
   rules: {
-    'prefer-to-be-true': toBeTrue
+    'prefer-to-be-true': toBeTrue,
+    'prefer-to-be-false': toBeFalse
   }
 };
