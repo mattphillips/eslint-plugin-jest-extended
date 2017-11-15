@@ -28,8 +28,7 @@ module.exports = context => {
               callee: {
                 type: 'Identifier',
                 name: 'expect'
-              },
-              arguments: isFalseIdentifier
+              }
             },
             property: {
               name: 'toBe'

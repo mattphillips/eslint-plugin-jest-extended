@@ -25,6 +25,39 @@ new RuleTester().run('prefer_to_be_false', rule, {
         }
       ],
       output: 'expect(false).toBeFalse();'
+    },
+    {
+      code: 'expect(true).toBe(false);',
+      errors: [
+        {
+          message: 'Use toBeFalse() instead.',
+          column: 1,
+          line: 1
+        }
+      ],
+      output: 'expect(true).toBeFalse();'
+    },
+    {
+      code: 'expect(varA).toBe(false);',
+      errors: [
+        {
+          message: 'Use toBeFalse() instead.',
+          column: 1,
+          line: 1
+        }
+      ],
+      output: 'expect(varA).toBeFalse();'
+    },
+    {
+      code: 'expect(varA, varB).toBe(false);',
+      errors: [
+        {
+          message: 'Use toBeFalse() instead.',
+          column: 1,
+          line: 1
+        }
+      ],
+      output: 'expect(varA, varB).toBeFalse();'
     }
   ]
 });

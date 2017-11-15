@@ -16,6 +16,39 @@ new RuleTester().run('prefer_to_be_true', rule, {
       output: 'expect(true).toBeTrue();'
     },
     {
+      code: 'expect(false).toBe(true);',
+      errors: [
+        {
+          message: 'Use toBeTrue() instead.',
+          column: 1,
+          line: 1
+        }
+      ],
+      output: 'expect(false).toBeTrue();'
+    },
+    {
+      code: 'expect(someVar).toBe(true);',
+      errors: [
+        {
+          message: 'Use toBeTrue() instead.',
+          column: 1,
+          line: 1
+        }
+      ],
+      output: 'expect(someVar).toBeTrue();'
+    },
+    {
+      code: 'expect(varA, varB).toBe(true);',
+      errors: [
+        {
+          message: 'Use toBeTrue() instead.',
+          column: 1,
+          line: 1
+        }
+      ],
+      output: 'expect(varA, varB).toBeTrue();'
+    },
+    {
       code: 'expect(true).toBeTruthy();',
       errors: [
         {
