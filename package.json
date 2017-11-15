@@ -1,0 +1,19 @@
+{
+  "name": "eslint-plugin-jest-extended",
+  "version": "0.0.1",
+  "description": "ESLint plugin for jest-extended matchers",
+  "main": "dist/index.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Matt Phillips <matt@mattphillips.io> (mattphillips.io)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattphillips/eslint-plugin-jest-extended.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattphillips/eslint-plugin-jest-extended/issues"
+  },
+  "homepage": "https://github.com/mattphillips/eslint-plugin-jest-extended#readme"
+}
