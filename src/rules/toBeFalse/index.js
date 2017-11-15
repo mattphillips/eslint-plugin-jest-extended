@@ -41,7 +41,7 @@ module.exports = context => {
 
       if (isToBeFalsy) {
         const fix = fixer => [fixer.replaceText(node.expression.callee.property, 'toBeFalse')];
-        return context.report({ node, message: 'Use toBeFalse() instead', fix });
+        return context.report({ node, message: 'Use toBeFalse() instead.', fix });
       }
 
       if (isToBe) {
@@ -49,7 +49,7 @@ module.exports = context => {
           fixer.replaceText(node.expression.callee.property, 'toBeFalse'),
           fixer.remove(node.expression.arguments[0])
         ];
-        return context.report({ node, message: 'Use toBeFalse() instead', fix });
+        return context.report({ node, message: 'Use toBeFalse() instead.', fix });
       }
     }
   };

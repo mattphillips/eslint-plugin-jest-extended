@@ -8,7 +8,7 @@ new RuleTester().run('prefer_to_be_true', rule, {
       code: 'expect(true).toBe(true);',
       errors: [
         {
-          message: 'Use toBeTrue() instead',
+          message: 'Use toBeTrue() instead.',
           column: 1,
           line: 1
         }
@@ -19,7 +19,7 @@ new RuleTester().run('prefer_to_be_true', rule, {
       code: 'expect(true).toBeTruthy();',
       errors: [
         {
-          message: 'Use toBeTrue() instead',
+          message: 'Use toBeTrue() instead.',
           column: 1,
           line: 1
         }

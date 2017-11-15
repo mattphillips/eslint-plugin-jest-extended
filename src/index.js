@@ -6,7 +6,7 @@ module.exports = {
     recommended: {
       rules: {
         'jest-extended/prefer-to-be-true': 'warn',
-        'jest-extended/prefer-to-be-falsy': 'warn'
+        'jest-extended/prefer-to-be-false': 'warn'
       }
     }
   },
