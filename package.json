@@ -4,6 +4,8 @@
   "description": "ESLint plugin for jest-extended matchers",
   "main": "dist/index.js",
   "scripts": {
+    "precommit": "lint-staged",
+    "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120"
   },
   "keywords": [],
   "author": "Matt Phillips <matt@mattphillips.io> (mattphillips.io)",
@@ -15,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/mattphillips/eslint-plugin-jest-extended/issues"
   },
-  "homepage": "https://github.com/mattphillips/eslint-plugin-jest-extended#readme"
+  "homepage": "https://github.com/mattphillips/eslint-plugin-jest-extended#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn prettier",
+      "git add"
+    ]
+  }
 }
