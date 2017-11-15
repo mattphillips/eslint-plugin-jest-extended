@@ -1,5 +1,4 @@
 <div align="center">
-
   <h1>eslint-plugin-jest-extended</h1>
 
   ESLint plugin for jest-extended matchers
@@ -13,7 +12,6 @@
   <a href="https://github.com/jest-community/jest-extended">
     <img width="150" height="150" src="https://camo.githubusercontent.com/b68d547b27824d6522a5f2fe80f0d25364204b45/68747470733a2f2f656d6f6a6970656469612d75732e73332e616d617a6f6e6177732e636f6d2f7468756d62732f3234302f6170706c652f3131342f666c657865642d6269636570735f31663461612e706e67">
   </a>
-
 </div>
 
 <hr />
@@ -26,9 +24,16 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Roadmap](https://img.shields.io/badge/%F0%9F%93%94-roadmap-CD9523.svg?style=flat-square)](https://github.com/mattphillips/eslint-plugin-jest-extended/blob/master/docs/ROADMAP.md)
 [![Examples](https://img.shields.io/badge/%F0%9F%92%A1-examples-ff615b.svg?style=flat-square)](https://github.com/mattphillips/eslint-plugin-jest-extended/blob/master/docs/EXAMPLES.md)
+
 ## Problem
 
+[jest-extended](https://github.com/jest-community/jest-extended) adds many additional matchers to
+[Jest's](https://facebook.github.io/jest/) default assertions but knowing when to use these matchers isn't always
+obvious.
+
 ## Solution
+
+`eslint-plugin-jest-extended` aims to tell you when you should use a specific matcher available in `jest-extended`.
 
 ## Installation
 
@@ -42,9 +47,54 @@ With yarn:
 yarn add -D eslint-plugin-jest-extended
 ```
 
-## Setup
-
 ## Usage
+
+### Plugin
+
+Add jest-extended to the plugins section of your `.eslintrc` configuration file.
+
+```json
+{
+  "plugins": ["jest-extended"]
+}
+```
+
+See [ESLint plugin](https://eslint.org/docs/user-guide/configuring#configuring-plugins) documentation for more
+information about using plugins.
+
+### Recommended configuration
+
+Add jest-extended to the extends section of your `.eslintrc` configuration file to use the recommended setup.
+
+```json
+{
+  "extends": ["plugin:jest-extended/recommended"]
+}
+```
+
+See [ESLint configuration](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) documentation
+for more information about extending configuration files.
+
+### Rules
+
+Add rules to your `.eslintrc` configuration file to either use a rule or override the default configuration if you are
+using the recommended setup.
+
+See [ESLint rules](https://eslint.org/docs/user-guide/configuring#configuring-rules) documentation for more information
+about adjusting rule settings.
+
+```json
+{
+  "rules": {
+    "jest-extended/prefer-to-be-true": "warn",
+    "jest-extended/prefer-to-be-false": "error"
+  }
+}
+```
+
+## Inspiration
+
+ - [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
 
 ## Contributors
 
